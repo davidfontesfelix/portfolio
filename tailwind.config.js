@@ -11,6 +11,7 @@ module.exports = {
         phone: { max: '480px' },
         phoneDetails: { max: '410px' },
         noPhone: { min: '480px' },
+        tablet: { max: '660px', min: '480px' },
       },
       colors: {
         black: '#151515',

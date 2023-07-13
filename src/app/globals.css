@@ -34,3 +34,19 @@
     opacity: 0;
   }
 }
+
+.fade-in-visibility-reverse{
+  opacity: 0;
+  animation: fade-in-visibility-reverse 1s ease-in forwards;
+}
+
+@keyframes fade-in-visibility-reverse {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}

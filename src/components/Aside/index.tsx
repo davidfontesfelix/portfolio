@@ -1,13 +1,13 @@
 'use client'
 import { useContext } from 'react'
 import Opacity from './Opacity'
-import Arrow from './Arrow'
 import LinksAside from './LinksAside'
 import Whatsapp from '../../assets/whatsapp.svg'
 import CV from '../../assets/cv.svg'
 import Linkedin from '../../assets/Linkedin.svg'
 import { MyContextAside } from '@/context/MyContexAside'
 import Navigation from './Navigation'
+import ButtonLayout from '../Layout/ButtonLayout'
 
 interface asideProps {
   local: string
@@ -17,7 +17,11 @@ export default function Aside({ local }: asideProps) {
   const { showAside, setShowAside } = useContext(MyContextAside)
   return (
     <>
-      <aside className=" z-10 absolute left-0">
+      <aside
+        className={`z-10 absolute left-0 transition-transform duration-500 -translate-x-[100vw] ${
+          showAside && '-translate-x-[0vw]'
+        }`}
+      >
         <div
           className={` ${
             showAside
@@ -44,8 +48,9 @@ export default function Aside({ local }: asideProps) {
                     icon={Whatsapp}
                   />
                   <LinksAside
-                    URL="https://docs.google.com/document/d/1ZOU1i7Y7IPNC_e_oJIk_Pyy70fbe3RDK/edit?usp=sharing&ouid=111993502324322830477&rtpof=true&sd=true"
+                    URL="/assets/cv-doc.pdf"
                     icon={CV}
+                    downloadName="Curriculo-DavidFontes.pdf"
                   />
                   <LinksAside
                     URL="https://www.linkedin.com/in/david-fontes-9b84a4201/"
@@ -65,13 +70,7 @@ export default function Aside({ local }: asideProps) {
               </div>
             </div>
           </div>
-
-          <button
-            onClick={() => setShowAside(!showAside)}
-            className="w-8 h-[200px] bg-black flex transition-all duration-300 justify-center items-center rounded-r-lg phone:hidden"
-          >
-            <Arrow leftOrRight={showAside} />
-          </button>
+          <ButtonLayout />
         </div>
       </aside>
       <Opacity show={showAside} setShow={setShowAside} />
