@@ -6,7 +6,7 @@ import ButtonLayout from './ButtonLayout'
 
 interface layoutProps {
   local: string
-  children: React.ReactElement
+  children?: React.ReactElement
 }
 
 export default function Layout({ local, children }: layoutProps) {
