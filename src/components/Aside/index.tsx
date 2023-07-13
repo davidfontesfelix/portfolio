@@ -19,7 +19,7 @@ export default function Aside({ local }: asideProps) {
     <>
       <aside
         className={`z-10 absolute left-0 transition-transform duration-500 -translate-x-[100vw] ${
-          showAside && '-translate-x-[0vw]'
+          showAside && 'translate-x-[0vw]'
         }`}
       >
         <div
