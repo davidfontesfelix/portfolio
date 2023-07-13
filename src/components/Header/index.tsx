@@ -7,11 +7,8 @@ import JavaScriptIcon from '../../assets/javascript.svg'
 
 import Image from 'next/image'
 import ButtonHeader from './ButtonHeader'
-import { MyContextAside } from '@/context/MyContexAside'
-import { useContext } from 'react'
 
 export default function Header(/* props: HeaderProps */) {
-  const { setShowAside } = useContext(MyContextAside)
   return (
     <div className="max-w-[33em] tablet:max-w-sm phone:max-w-xs">
       <h2 className="text-3xl tablet:text-xl phone:text-lg font-medium tracking-[0.15em] tablet:tracking-[0.22em]">
@@ -46,10 +43,7 @@ export default function Header(/* props: HeaderProps */) {
         Tenho 17 anos, sou desenvolvedor front end com 7 meses de experiencia
         trabalhando como freelancer.
       </p>
-      <div
-        onClick={() => setShowAside(true)}
-        className="flex mt-[8vh] z-10 justify-center"
-      >
+      <div className="flex mt-[8vh] z-10 justify-center">
         <ButtonHeader title="click para navegar" />
       </div>
     </div>

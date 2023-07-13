@@ -50,3 +50,16 @@
     opacity: 1;
   }
 }
+
+.animation-bounce{
+  animation: animation-bounce 10s infinite ease-in-out ;
+}
+
+@keyframes animation-bounce {
+  0%, 100% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(10%)
+  }
+}

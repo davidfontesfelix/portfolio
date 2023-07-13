@@ -10,8 +10,11 @@ module.exports = {
       screens: {
         phone: { max: '480px' },
         phoneDetails: { max: '410px' },
-        noPhone: { min: '480px' },
+        // noPhone: { min: '480px' },
         tablet: { max: '660px', min: '480px' },
+        details: { raw: '(max-height: 790px)' },
+        desktops: { max: '1210px', min: '940px' },
+        laptops: { max: '940px', min: '660px' },
       },
       colors: {
         black: '#151515',

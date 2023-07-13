@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { MyContextAside } from '@/context/MyContexAside'
+import { useContext, useEffect, useState } from 'react'
 interface ButtonHeaderProps {
   title: string
   icon?: string
@@ -22,11 +23,24 @@ export function Arrow({ color }: ArrowProps) {
   )
 }
 export default function ButtonHeader(props: ButtonHeaderProps) {
+  const { setShowAside } = useContext(MyContextAside)
   const [hover, setHover] = useState(false)
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout
+
+    if (hover) {
+      timeoutId = setTimeout(() => {
+        setShowAside(true)
+      }, 3800)
+    }
+    return () => clearTimeout(timeoutId)
+  }, [hover, setShowAside])
+
   return (
     <button
-      onMouseOver={() => setHover(true)}
-      onMouseOut={() => setHover(false)}
+      onClick={() => setShowAside(true)}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       className="w-[400px] py-3 border-2 shadow-2xl overflow-hidden relative border-black flex items-center justify-center gap-3"
     >
       <span className="text-xl font-medium ">{props.title}</span>

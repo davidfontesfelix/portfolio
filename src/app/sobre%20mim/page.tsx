@@ -1,3 +1,4 @@
+import SobreMimSection from '@/components/SobreMimSection'
 import Layout from '../../components/Layout'
 
 export default function SobreMim() {
@@ -5,7 +6,7 @@ export default function SobreMim() {
     <div>
       <div className="w-screen absolute z-50 h-screen bg-white fade-in-visibility"></div>
       <Layout local="sobre mim">
-        <h1>em construção</h1>
+        <SobreMimSection />
       </Layout>
     </div>
   )
