@@ -15,10 +15,10 @@ export default function FooterLocate({ local }: FooterLocateProps) {
         }`}
       ></Link>
       <Link
-        aria-label="ir para o sobre mim"
-        href={'/sobre mim'}
+        aria-label="ir para o sobre"
+        href={'/sobre'}
         className={`h-2 w-9 cursor-pointer ${
-          local === 'sobre mim' ? 'bg-black' : 'bg-neutral-300'
+          local === 'sobre' ? 'bg-black' : 'bg-neutral-300'
         }`}
       ></Link>
       <Link

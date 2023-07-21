@@ -41,7 +41,7 @@ export default function Aside({ local }: asideProps) {
                   />
                   <LinksAside
                     arialLabel="botão para baixar meu curriculo"
-                    URL="https://firebasestorage.googleapis.com/v0/b/portfolio-820d8.appspot.com/o/docs%2FCURRICULO-DAVIDFONTES.docx?alt=media&token=d692de5d-e045-44a4-985e-ec1e3ccb4647"
+                    URL="https://firebasestorage.googleapis.com/v0/b/portfolio-7ef76.appspot.com/o/docs%2FCURRICULO-DAVIDFONTES.pdf?alt=media&token=a19c54b0-bdea-4044-b2ab-f492ee32b8fd"
                     icon="/assets/svgs/Cv.svg"
                     downloadName="Curriculo-DavidFontes.pdf"
                   />
