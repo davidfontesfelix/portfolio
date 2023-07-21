@@ -22,15 +22,15 @@ export default function Carousel() {
   const [dataProjeto3, setDataProjeto3] = useState<projeto>()
   const [load, setLoad] = useState(false)
 
-  const dataFetch = () => {
-    axios
-      .get('https://backend-portfolio-one.vercel.app/projects')
-      .then((response) => {
-        setDataProjeto1(response.data.projeto1)
-        setDataProjeto2(response.data.projeto2)
-        setDataProjeto3(response.data.projeto3)
-        setLoad(true)
-      })
+  const dataFetch = async () => {
+    const response = await axios.get(
+      'https://backend-portfolio-one.vercel.app/projects',
+    )
+
+    setDataProjeto1(response.data.projeto1)
+    setDataProjeto2(response.data.projeto2)
+    setDataProjeto3(response.data.projeto3)
+    setLoad(true)
   }
   useEffect(() => {
     dataFetch()
