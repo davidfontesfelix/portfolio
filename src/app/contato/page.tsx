@@ -1,13 +1,12 @@
+import ContatoSection from '@/components/screens/ContatoSection'
 import Layout from '../../components/Layout'
 
-// interface ContatoProps {}
-
-export default function Contato(/* props: ContatoProps */) {
+export default function Contato() {
   return (
     <div>
-      <div className="w-screen absolute z-50 h-screen bg-white fade-in-visibility"></div>
+      <div className="fade-in-visibility absolute z-50 h-screen w-screen bg-white"></div>
       <Layout local="contato">
-        <h1>em contrução</h1>
+        <ContatoSection />
       </Layout>
     </div>
   )

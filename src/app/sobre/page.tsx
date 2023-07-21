@@ -1,12 +1,12 @@
-import ProjetosSection from '@/components/screens/ProjetosSection'
+import SobreMimSection from '@/components/screens/SobreMimSection'
 import Layout from '../../components/Layout'
 
-export default function Projetos() {
+export default function SobreMim() {
   return (
     <div>
       <div className="fade-in-visibility absolute z-50 h-screen w-screen bg-white"></div>
-      <Layout local="projetos">
-        <ProjetosSection />
+      <Layout local="sobre">
+        <SobreMimSection />
       </Layout>
     </div>
   )

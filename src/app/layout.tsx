@@ -1,8 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+// eslint-disable-next-line camelcase
+import { Roboto_Slab } from 'next/font/google'
 
-const poppins = Poppins({
+const roboto = Roboto_Slab({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
 })
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={poppins.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   )
 }

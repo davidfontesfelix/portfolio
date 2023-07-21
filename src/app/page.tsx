@@ -12,12 +12,12 @@ export default function Home() {
   }, [router])
 
   return (
-    <section className="fade-in w-screen h-screen flex items-center justify-center flex-col gap-2">
+    <section className="fade-in flex h-screen w-screen flex-col items-center justify-center gap-2">
       <h1 className="text-4xl phone:text-2xl">
         Portfolio de <strong>David Fontes</strong>
       </h1>
-      <h2 className="text-3xl phone:text-xl text-neutral-500">
-        Por favor beba <span className="text-blue-400 font-semibold">Agua</span>
+      <h2 className="text-3xl text-neutral-500 phone:text-xl">
+        Por favor beba <span className="font-semibold text-blue-400">Agua</span>
       </h2>
     </section>
   )
