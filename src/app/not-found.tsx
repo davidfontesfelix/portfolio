@@ -3,17 +3,14 @@ import { useEffect, useState } from 'react'
 // eslint-disable-next-line camelcase
 import { Press_Start_2P } from 'next/font/google'
 import './404.css'
-import { useRouter } from 'next/navigation'
 
 const pressStart2P = Press_Start_2P({ subsets: ['latin'], weight: ['400'] })
 
-export default function PageNotFound() {
+export default function NotFound() {
   const [say, setSay] = useState(false)
   const [nervous, setNervous] = useState(false)
   const [rabid, setRabid] = useState(false)
   const [rabid2, setRabid2] = useState(false)
-
-  const router = useRouter()
 
   const [sentence, setSentence] = useState(
     'Ei, como você veio parar nesse lugar?, deseja voltar para o inicio?',

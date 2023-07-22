@@ -58,6 +58,7 @@ export default function Aside({ local }: asideProps) {
                 <Navigation local={local} nav="sobre" />
                 <Navigation local={local} nav="projetos" />
                 <Navigation local={local} nav="contato" />
+                <Navigation local={local} nav="test" />
               </div>
               <footer className="absolute bottom-6 text-sm text-slate-600">
                 <p>©davidfontesfelix</p>
