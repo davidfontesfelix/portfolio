@@ -42,7 +42,7 @@ export default function ButtonHeader(props: ButtonHeaderProps) {
       onClick={() => setShowAside(true)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="relative flex w-[400px] items-center justify-center gap-3 overflow-hidden border-2 border-black py-3 shadow-2xl"
+      className="relative flex w-[400px] items-center justify-center gap-3 overflow-hidden border-2 border-black py-3 shadow-xl"
     >
       <span className="text-xl font-medium ">{props.title}</span>
       <Arrow color="black" />

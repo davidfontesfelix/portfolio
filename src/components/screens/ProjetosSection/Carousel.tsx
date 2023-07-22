@@ -72,7 +72,7 @@ export default function Carousel() {
     return (
       <>
         <Heading>Projetos</Heading>
-        <div className="flex items-center">
+        <div className="mt-4 flex items-center">
           <button
             aria-label="voltar projeto"
             onClick={() => backProject()}
@@ -86,7 +86,7 @@ export default function Carousel() {
               onClick={() => backProject()}
               className={`${
                 showCard1 && 'opacity-0'
-              } absolute left-0 z-10 h-full w-[300px] transition-all duration-500 phone:hidden tablet:hidden laptops:w-[150px]`}
+              } absolute left-0 z-10 h-full w-[200px] transition-all duration-500 phone:hidden tablet:hidden laptops:w-[150px]`}
               style={{
                 background:
                   'linear-gradient(90deg, rgba(28, 28, 28, 0.70) 0%, rgba(217, 217, 217, 0.00) 100%)',
@@ -96,7 +96,7 @@ export default function Carousel() {
               onClick={() => nextProject()}
               className={`${
                 showCard3 && 'opacity-0'
-              } absolute right-0 z-10 h-full w-[300px] transition-all duration-500 phone:hidden tablet:hidden laptops:w-[150px] `}
+              } absolute right-0 z-10 h-full w-[200px] transition-all duration-500 phone:hidden tablet:hidden laptops:w-[150px] `}
               style={{
                 background:
                   'linear-gradient(90deg, rgba(217, 217, 217, 0.00) 0%, rgba(28, 28, 28, 0.71) 92.19%)',

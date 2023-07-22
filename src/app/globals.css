@@ -55,7 +55,7 @@
   animation: animation-bounce 10s infinite ease-in-out ;
 }
 
-@keyframes animation-bounce {
+  @keyframes animation-bounce {
   0%, 100% {
     transform: translateY(-10%);
   }

@@ -1,0 +1,45 @@
+.frame1{
+  background-image: url(/assets/frames/frame1.png);
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+.frame2{
+  background-image: url(/assets/frames/frame2.png);
+  background-size: cover;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  animation: say 0.2s infinite;
+}
+
+.frame3{
+  background-image: url(/assets/frames/frame3.png);
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
+.frame4{
+  background-image: url(/assets/frames/frame4.png);
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+.frame5{
+  background-image: url(/assets/frames/frame5.png);
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
+@keyframes say {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}

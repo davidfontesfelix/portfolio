@@ -21,7 +21,7 @@ export default function Aside({ local }: asideProps) {
       >
         <div className="relative flex items-center">
           <div className="flex h-screen w-[360px] justify-center border-r-[12px] border-black bg-white">
-            <div className="mt-9 grid grid-rows-[12vh_140px_50vh]">
+            <div className="mt-8 ">
               <div>
                 <div>
                   <h2 className="text-3xl font-bold tracking-wider phone:text-3xl">
@@ -32,7 +32,7 @@ export default function Aside({ local }: asideProps) {
                   Bem-vindo ao meu portfolio.
                 </p>
               </div>
-              <div>
+              <div className="mt-8">
                 <div className="flex gap-8 phone:gap-10">
                   <LinksAside
                     arialLabel="botão para ir para o meu whatsapp"
@@ -53,7 +53,7 @@ export default function Aside({ local }: asideProps) {
                 </div>
                 <div className="mt-6 h-[2px] w-full bg-black" />
               </div>
-              <div className="relative flex flex-col">
+              <div className="relative mt-6 flex flex-col">
                 <Navigation local={local} nav="inicio" />
                 <Navigation local={local} nav="sobre" />
                 <Navigation local={local} nav="projetos" />

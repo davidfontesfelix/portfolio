@@ -20,15 +20,15 @@ export default function LinksAside({
         aria-label={arialLabel}
         download="Curriculo-david.pdf"
         target="_blank"
-        className=" flex h-16 w-16 cursor-pointer items-center justify-center rounded-lg bg-black shadow-lg shadow-black/40 phone:h-[70px] phone:w-[70px]"
+        className=" flex h-14 w-14 cursor-pointer items-center justify-center rounded-lg border-neutral-400 bg-black shadow-md shadow-black/40 hover:border-2 phone:h-16 phone:w-16"
         rel="noreferrer"
       >
         <Image
-          width={40}
-          height={40}
+          width={32}
+          height={32}
           alt="icon de curriculo"
           src={icon}
-          className="w-10 phone:w-12"
+          className="w-10 "
         />
       </a>
     )
@@ -38,15 +38,15 @@ export default function LinksAside({
         href={URL}
         aria-label={arialLabel}
         target="_blank"
-        className=" flex h-16 w-16 cursor-pointer items-center justify-center rounded-lg bg-black shadow-lg shadow-black/40 phone:h-[70px] phone:w-[70px]"
+        className=" flex h-14 w-14 cursor-pointer items-center justify-center rounded-lg border-neutral-400 bg-black shadow-lg shadow-black/40 hover:border-2 phone:h-16 phone:w-16"
         rel="noreferrer"
       >
         <Image
-          width={40}
-          height={40}
+          width={32}
+          height={32}
           alt="icon do whatsapp ou linkedin"
           src={icon}
-          className="w-10 phone:w-12"
+          className="w-10 "
         />
       </a>
     )

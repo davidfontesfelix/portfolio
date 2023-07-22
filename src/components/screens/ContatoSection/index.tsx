@@ -5,7 +5,7 @@ export default function ContatoSection() {
   return (
     <div className="text-center">
       <Heading>Contato</Heading>
-      <ul className="mt-8 flex flex-col gap-4">
+      <ul className="mt-6 flex flex-col gap-4">
         <li>
           <h2 className="mb-2 text-4xl font-medium phone:text-3xl">Email:</h2>
           <a
@@ -14,7 +14,7 @@ export default function ContatoSection() {
             className="border-b-2 border-black text-2xl phone:text-xl"
             rel="noreferrer"
           >
-            davidfontes.developer@gmail.com
+            davidfontes303@gmail.com
           </a>
         </li>
         <li>
@@ -24,10 +24,10 @@ export default function ContatoSection() {
           <p className="text-2xl phone:text-xl">(79) 9 9963-4862</p>
         </li>
       </ul>
-      <h4 className="mb-4 mt-8 text-5xl font-medium phone:text-3xl">
+      <h4 className="mb-4 mt-6 text-5xl font-medium phone:text-3xl">
         rede sociais
       </h4>
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col gap-2">
         <li>
           <Links.Title href="https://wa.me/5579999634862">Whatsapp</Links.Title>
         </li>
