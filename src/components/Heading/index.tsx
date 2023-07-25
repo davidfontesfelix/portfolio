@@ -4,7 +4,7 @@ interface headingProps {
 
 export default function Heading({ children }: headingProps) {
   return (
-    <h1 className="text-6xl font-bold phone:text-4xl tablet:text-4xl desktops:text-5xl laptops:text-4xl">
+    <h1 className=" text-6xl font-bold uppercase tracking-wider phoneSm:text-3xl phone:text-4xl tablet:text-5xl">
       {children}
     </h1>
   )

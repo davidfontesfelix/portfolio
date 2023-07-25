@@ -8,15 +8,12 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        phone: { max: '480px' },
-        phoneSm: { max: '390px' },
-        phoneDetails: { max: '410px' },
-        // noPhone: { min: '480px' },
-        tablet: { max: '660px', min: '480px' },
-        details: { raw: '(max-height: 790px)' },
-        detailsSmall: { raw: '(max-height: 600px)' },
-        desktops: { max: '1210px', min: '940px' },
-        laptops: { max: '940px', min: '660px' },
+        smHeight: { raw: '(max-height: 740px)' },
+        phoneSm: { max: '375px' },
+        phone: { max: '480px', min: '376px' },
+        horizontal: { raw: '(max-height: 480px)' },
+        tablet: { max: '1024px', min: '600px' },
+        laptops: { min: '1025px' },
       },
       colors: {
         black: '#151515',

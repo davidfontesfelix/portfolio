@@ -20,7 +20,7 @@ export default function LinksAside({
         aria-label={arialLabel}
         download="Curriculo-david.pdf"
         target="_blank"
-        className=" flex h-14 w-14 cursor-pointer items-center justify-center rounded-lg border-neutral-400 bg-black shadow-md shadow-black/40 hover:border-2 phone:h-16 phone:w-16"
+        className=" flex h-14 w-14 cursor-pointer items-center justify-center rounded-lg bg-black shadow-md shadow-black/40 transition-colors duration-200 hover:bg-neutral-600 phone:h-16 phone:w-16"
         rel="noreferrer"
       >
         <Image
@@ -38,7 +38,7 @@ export default function LinksAside({
         href={URL}
         aria-label={arialLabel}
         target="_blank"
-        className=" flex h-14 w-14 cursor-pointer items-center justify-center rounded-lg border-neutral-400 bg-black shadow-lg shadow-black/40 hover:border-2 phone:h-16 phone:w-16"
+        className=" flex h-14 w-14 cursor-pointer items-center justify-center rounded-lg bg-black shadow-lg shadow-black/40 transition-colors duration-200  hover:bg-neutral-600 phone:h-16 phone:w-16"
         rel="noreferrer"
       >
         <Image

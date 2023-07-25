@@ -7,25 +7,29 @@ export default function ContatoSection() {
       <Heading>Contato</Heading>
       <ul className="mt-6 flex flex-col gap-4">
         <li>
-          <h2 className="mb-2 text-4xl font-medium phone:text-3xl">Email:</h2>
+          <h2 className="mb-2 text-4xl font-medium phoneSm:text-3xl phone:text-3xl">
+            Email:
+          </h2>
           <a
             target="_blank"
-            href="mailto:davidfontes.developer@gmail.com"
-            className="border-b-2 border-black text-2xl phone:text-xl"
+            href="mailto:davidfontes303@gmail.com"
+            className="border-b-2 border-black text-2xl phoneSm:text-xl phone:text-xl"
             rel="noreferrer"
           >
             davidfontes303@gmail.com
           </a>
         </li>
         <li>
-          <h2 className="mb-2 text-4xl font-medium phone:text-3xl">
+          <h2 className="mb-2 text-4xl font-medium phoneSm:text-3xl phone:text-3xl">
             Telefone:
           </h2>
-          <p className="text-2xl phone:text-xl">(79) 9 9963-4862</p>
+          <p className="text-2xl phoneSm:text-xl phone:text-xl">
+            (79) 9 9963-4862
+          </p>
         </li>
       </ul>
       <h4 className="mb-4 mt-6 text-5xl font-medium phone:text-3xl">
-        rede sociais
+        Redes sociais
       </h4>
       <ul className="flex flex-col gap-2">
         <li>

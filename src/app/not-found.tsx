@@ -13,7 +13,7 @@ export default function NotFound() {
   const [rabid2, setRabid2] = useState(false)
 
   const [sentence, setSentence] = useState(
-    'Ei, como você veio parar nesse lugar?, deseja voltar para o inicio?',
+    'Ei, como você veio parar nesse lugar? Deseja voltar para o início?',
   )
 
   const speech = (temp: number) => {
@@ -32,13 +32,15 @@ export default function NotFound() {
   const handleClickYes = () => {
     if (
       sentence ===
-      'Ei, como você veio parar nesse lugar?, deseja voltar para o inicio?'
+      'Ei, como você veio parar nesse lugar? Deseja voltar para o início?'
     ) {
       window.location.href = '/inicio'
-    } else if (sentence === 'Não?, acho que não foi isso que você quis dizer') {
-      setNervous(false)
+    } else if (
+      sentence === 'Não? Acho que não foi isso que você quis dizer...'
+    ) {
       setSentence('Encaminharei você para o inicio')
       speech(3000)
+      setNervous(false)
       setTimeout(() => {
         window.location.href = '/inicio'
       }, 3000)
@@ -47,19 +49,21 @@ export default function NotFound() {
   const handleClickNot = () => {
     if (
       sentence ===
-      'Ei, como você veio parar nesse lugar?, deseja voltar para o inicio?'
+      'Ei, como você veio parar nesse lugar? Deseja voltar para o início?'
     ) {
-      setNervous(true)
-      setSentence('Não?, acho que não foi isso que você quis dizer')
+      setSentence('Não? Acho que não foi isso que você quis dizer...')
       speech(4000)
-    } else if (sentence === 'Não?, acho que não foi isso que você quis dizer') {
-      setRabid(true)
+      setNervous(true)
+    } else if (
+      sentence === 'Não? Acho que não foi isso que você quis dizer...'
+    ) {
       setSentence('NÃO??')
       speech(2000)
+      setRabid(true)
       setTimeout(() => {
-        setRabid2(true)
         setSentence('VOCÊ NÃO TEM ESCOLHA!!!')
         speech(4000)
+        setRabid2(true)
         setTimeout(() => {
           window.location.href = '/inicio'
         }, 2000)
@@ -71,16 +75,10 @@ export default function NotFound() {
       className={` ${pressStart2P.className} flex h-screen w-screen flex-col items-center justify-center bg-[#000]`}
     >
       <h1 className="mb-6 text-8xl text-white/90">404</h1>
-      <div className=" relative h-[25vh] w-[80vw] overflow-hidden border-4 border-white/90 text-white/90 phone:w-[90vw] details:h-[30vh] desktops:w-[85vw]">
+      <div className="relative h-[max(24vh,_260px)] w-[80vw] overflow-hidden border-4 border-white/90 text-white/90 phone:w-[90vw]">
         <p className="pl-6 pt-6">{sentence}</p>
         <div
-          className={`${
-            say
-              ? 'hidden'
-              : sentence === 'NÃO??' || sentence === 'VOCÊ NÃO TEM ESCOLHA!!!'
-              ? 'hidden'
-              : 'flex'
-          } mt-14 w-full justify-center gap-16 text-5xl phone:mt-6 phone:text-3xl tablet:mt-10`}
+          className={`absolute bottom-8 flex w-full justify-center gap-16 text-5xl phoneSm:text-3xl phone:mt-6  phone:text-3xl`}
         >
           <button onClick={() => handleClickYes()} className="hover:opacity-70">
             Sim

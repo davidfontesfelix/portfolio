@@ -13,7 +13,7 @@ export default function Tech({ src, alt, animation }: techProps) {
       height={64}
       src={src}
       alt={alt}
-      className={`w-16 phone:w-10 tablet:w-12 ${
+      className={`w-8 phone:w-10 horizontal:w-10 tablet:w-16 laptops:w-16 ${
         animation
           ? 'animate-[spin_4s_linear_infinite] transition-transform'
           : ''

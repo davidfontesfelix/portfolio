@@ -2,9 +2,7 @@
 import { MyContextAside } from '@/context/MyContexAside'
 import { useContext, useEffect, useState } from 'react'
 interface ButtonHeaderProps {
-  title: string
-  icon?: string
-  iconWhite?: string
+  children: string
 }
 
 interface ArrowProps {
@@ -23,7 +21,7 @@ export function Arrow({ color }: ArrowProps) {
     </div>
   )
 }
-export default function ButtonHeader(props: ButtonHeaderProps) {
+export default function ButtonHeader({ children }: ButtonHeaderProps) {
   const { setShowAside } = useContext(MyContextAside)
   const [hover, setHover] = useState(false)
   useEffect(() => {
@@ -42,9 +40,11 @@ export default function ButtonHeader(props: ButtonHeaderProps) {
       onClick={() => setShowAside(true)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="relative flex w-[400px] items-center justify-center gap-3 overflow-hidden border-2 border-black py-3 shadow-xl"
+      className="relative flex w-full max-w-[400px] items-center justify-center gap-3 overflow-hidden border-2 border-black py-4 shadow-xl phone:w-full"
     >
-      <span className="text-xl font-medium ">{props.title}</span>
+      <span className="text-xl font-medium uppercase tracking-wider">
+        {children}
+      </span>
       <Arrow color="black" />
 
       <div
@@ -53,11 +53,11 @@ export default function ButtonHeader(props: ButtonHeaderProps) {
         }`}
       >
         <span
-          className={`fixed flex gap-3 text-xl font-medium text-white transition-transform duration-[4s] ease-in-out ${
+          className={`fixed flex gap-4 text-xl font-medium uppercase tracking-wider text-white transition-transform duration-[4s] ease-in-out ${
             hover ? 'translate-x-[0px]' : 'translate-x-[400px]'
           }`}
         >
-          {props.title}
+          {children}
           <div className="mt-2">
             <Arrow color="white" />
           </div>

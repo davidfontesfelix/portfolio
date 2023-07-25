@@ -10,7 +10,7 @@ export default function Opacity({ show, setShow }: opacityProps) {
   return (
     <div
       onClick={handleClick}
-      className={`absolute z-0 h-screen w-screen -translate-x-[100vw] bg-black/40 transition-transform duration-500 ${
+      className={`absolute z-0 h-screen w-screen -translate-x-[100vw] bg-black/40 transition-transform duration-500 horizontal:h-[120%] ${
         show ? 'translate-x-[0vw]' : '-translate-x-[100vw] '
       }`}
     ></div>

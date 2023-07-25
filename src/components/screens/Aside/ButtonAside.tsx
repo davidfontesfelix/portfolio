@@ -8,7 +8,7 @@ export default function ButtonLayout() {
     <button
       aria-label="Botão para fechar ou abrir aside"
       onClick={() => setShowAside(!showAside)}
-      className="z-20 flex h-[200px] w-8 items-center justify-center rounded-r-lg bg-black phone:hidden
+      className="z-20 hidden h-[200px] w-8 items-center justify-center rounded-r-lg bg-black laptops:flex
       "
     >
       <div className="-ml-1 flex flex-col">

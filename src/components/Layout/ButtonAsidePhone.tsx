@@ -8,7 +8,7 @@ export default function ButtonAsidePhone() {
     <button
       aria-label="Botão para fechar ou abrir aside"
       onClick={() => setShowAside(!showAside)}
-      className="absolute right-5 top-8 z-50 hidden h-16 w-16 rounded-lg  bg-black phone:block"
+      className="absolute right-5 top-8 z-50 block h-16 w-16 rounded-lg  bg-black horizontal:fixed laptops:hidden"
     >
       {showAside ? (
         <div className="flex items-center justify-center">
