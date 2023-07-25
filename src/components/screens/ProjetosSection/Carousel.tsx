@@ -63,7 +63,7 @@ export default function Carousel() {
   return (
     <>
       <Heading>Projetos</Heading>
-      <div className="mt-4 flex items-center phoneSm:mt-0 phone:mt-2">
+      <div className="flex items-center smHeight:mt-0 phoneSm:mt-0 phone:mt-2">
         <button
           aria-label="voltar projeto"
           onClick={() => backProject()}
@@ -96,13 +96,13 @@ export default function Carousel() {
           <div
             className={`flex ${
               showCard1 &&
-              'translate-x-[400px] phoneSm:translate-x-[260px] phone:translate-x-[300px] tablet:translate-x-[300px]'
+              'translate-x-[400px] smHeight:translate-x-[320px] phoneSm:translate-x-[260px] phone:translate-x-[300px] tablet:translate-x-[300px]'
             } ${
               showCard2 &&
-              'translate-x-[0px] phoneSm:translate-x-[0px] phone:translate-x-[10px] tablet:translate-x-[0px]'
+              'translate-x-[0px] smHeight:-translate-x-[0px] phoneSm:translate-x-[0px] phone:translate-x-[10px] tablet:translate-x-[0px]'
             } ${
               showCard3 &&
-              '-translate-x-[400px] phoneSm:-translate-x-[260px] phone:-translate-x-[280px] tablet:-translate-x-[300px]'
+              '-translate-x-[400px] smHeight:-translate-x-[320px] phoneSm:-translate-x-[260px] phone:-translate-x-[280px] tablet:-translate-x-[300px]'
             } transition-transform duration-1000 `}
           >
             <Card show={showCard1} data={dataProjeto1} loading={load} />

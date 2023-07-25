@@ -6,7 +6,7 @@ interface FooterLocateProps {
 
 export default function FooterLocate({ local }: FooterLocateProps) {
   return (
-    <footer className="absolute bottom-8 flex gap-3 horizontal:bottom-2">
+    <footer className="absolute bottom-8 flex gap-3 smHeight:bottom-4 horizontal:bottom-2">
       <Link
         aria-label="ir para o inicio"
         href={'/inicio'}

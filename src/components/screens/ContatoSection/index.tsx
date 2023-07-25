@@ -31,7 +31,7 @@ export default function ContatoSection() {
       <h4 className="mb-4 mt-6 text-5xl font-medium phone:text-3xl">
         Redes sociais
       </h4>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-4">
         <li>
           <Links.Title href="https://wa.me/5579999634862">Whatsapp</Links.Title>
         </li>

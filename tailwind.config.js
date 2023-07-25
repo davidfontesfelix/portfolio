@@ -12,8 +12,8 @@ module.exports = {
         phoneSm: { max: '375px' },
         phone: { max: '480px', min: '376px' },
         horizontal: { raw: '(max-height: 480px)' },
-        tablet: { max: '1024px', min: '600px' },
-        laptops: { min: '1025px' },
+        tablet: { max: '1023px', min: '600px' },
+        laptops: { min: '1024px' },
       },
       colors: {
         black: '#151515',
