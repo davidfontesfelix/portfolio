@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Informations from './Informations'
 import Heading from '@/components/Heading'
+import checkAge from '@/components/checkAge'
 
 export default function SobreMimSection() {
   return (
@@ -28,7 +29,7 @@ export default function SobreMimSection() {
           </p>
         </div>
         <div className="mb-6 mt-10 flex gap-6 smHeight:hidden phoneSm:mt-4 phoneSm:flex-wrap phoneSm:gap-4 phone:mt-4 phone:flex-wrap phone:gap-4 tablet:max-w-[34rem] tablet:flex-wrap">
-          <Informations title="Idade" response="17 Anos" />
+          <Informations title="Idade" response={`${checkAge(2005)} anos`} />
           <Informations title="Ingles" response="Intermediário" />
           <Informations title="Cargo Atual" response="Freelancer" />
         </div>

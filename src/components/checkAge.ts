@@ -1,17 +1,14 @@
-export default function checkAge(dataNascimento: string) {
-  const dataAtual = new Date()
-  const dataNasc = new Date(dataNascimento)
+export default function checkAge(yearOfBirth: number) {
+  const currentDate = new Date()
 
-  let idade = dataAtual.getFullYear() - dataNasc.getFullYear()
+  const age = currentDate.getFullYear() - yearOfBirth
 
-  const mesAtual = dataAtual.getMonth()
-  const diaAtual = dataAtual.getDate()
-  const mesNasc = dataNasc.getMonth()
-  const diaNasc = dataNasc.getDate()
+  const currentMonth = currentDate.getMonth()
+  const currentDay = currentDate.getDate()
 
-  if (mesAtual < mesNasc || (mesAtual === mesNasc && diaAtual < diaNasc)) {
-    idade--
+  if (currentMonth === 11 && currentDay >= 15) {
+    return age
   }
 
-  return idade
+  return age - 1
 }

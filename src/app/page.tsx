@@ -17,7 +17,7 @@ export default function Home() {
         Portfolio de <strong>David Fontes</strong>
       </h1>
       <h2 className="text-3xl text-neutral-500 phone:text-xl">
-        Por favor beba <span className="font-semibold text-blue-400">Agua</span>
+        Por favor beba <span className="font-semibold text-blue-400">água</span>
       </h2>
     </section>
   )

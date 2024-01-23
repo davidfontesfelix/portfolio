@@ -1,5 +1,7 @@
+import checkAge from '@/components/checkAge'
 import ButtonHeader from './ButtonHeader'
 import Tech from './Tech'
+import checkExperience from '@/components/checkExperience'
 
 export default function Header() {
   return (
@@ -26,8 +28,9 @@ export default function Header() {
       </h1>
       <div className="flex tablet:justify-end laptops:justify-end">
         <p className="w-full max-w-xs leading-5 phone:max-w-none tablet:max-w-md laptops:max-w-md">
-          Tenho 17 anos e sou desenvolvedor front-end com 7 meses de experiência
-          trabalhando como freelancer.
+          Tenho {checkAge(2005)} anos e sou desenvolvedor front-end com{' '}
+          {checkExperience(2021)} ano de experiência trabalhando como
+          freelancer.
         </p>
       </div>
       <div className="z-10 mt-12 flex justify-center">
