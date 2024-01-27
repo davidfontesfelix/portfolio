@@ -13,16 +13,17 @@ interface projetoDataType {
 }
 
 interface CardProps {
-  show?: boolean
+  show: number
   data: projetoDataType | any
   loading: boolean
+  id: number
 }
 
-export default function Card({ show, data, loading }: CardProps) {
+export default function Card({ show, data, loading, id }: CardProps) {
   return (
     <div
       className={` ${
-        show ? '' : ' scale-90 phoneSm:opacity-0 phone:opacity-0'
+        show === id ? '' : ' scale-90 phoneSm:opacity-0 phone:opacity-0'
       }  h-[600px] w-[400px] rounded-lg bg-black text-left transition-all duration-1000 smHeight:h-[460px] smHeight:w-[320px] phoneSm:h-[420px] phoneSm:w-[260px] phone:h-[520px] phone:w-[290px] tablet:h-[600px] tablet:w-[340px]`}
     >
       <div className=" flex h-[45%] w-full items-center justify-center rounded-t-lg bg-[#636363] phoneSm:h-[40%] phone:h-[37%] tablet:h-[37%]">
@@ -67,7 +68,7 @@ export default function Card({ show, data, loading }: CardProps) {
               <Image
                 width={30}
                 height={30}
-                src="/assets/svgs/Link.svg"
+                src="/assets/icons/Link.svg"
                 alt="link do site"
               />
               Link do projeto

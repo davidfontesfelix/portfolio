@@ -16,11 +16,11 @@ export default function Header() {
         <div className="flex gap-4 phoneSm:gap-2 phone:gap-2">
           <Tech
             animation={true}
-            src="/assets/svgs/React.svg"
+            src="/assets/icons/React.svg"
             alt="icone do React"
           />
-          <Tech src="/assets/svgs/Typescript.svg" alt="icone do TypeScript" />
-          <Tech src="/assets/svgs/Javascript.svg" alt="icone do JavaScript" />
+          <Tech src="/assets/icons/Typescript.svg" alt="icone do TypeScript" />
+          <Tech src="/assets/icons/Javascript.svg" alt="icone do JavaScript" />
         </div>
       </div>
       <h1 className="flex flex-col text-5xl font-semibold phone:text-6xl horizontal:text-6xl tablet:text-8xl laptops:text-8xl">

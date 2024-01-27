@@ -35,14 +35,14 @@ export default function Aside({ local }: asideProps) {
                   <LinksAside
                     arialLabel="botão para ir para o meu whatsapp"
                     URL="https://wa.me/5579999634862"
-                    icon="/assets/svgs/Whatsapp.svg"
+                    icon="/assets/icons/Whatsapp.svg"
                   />
                 </li>
                 <li>
                   <LinksAside
                     arialLabel="botão para baixar meu curriculo"
                     URL="/assets/Cv.pdf"
-                    icon="/assets/svgs/Cv.svg"
+                    icon="/assets/icons/Cv.svg"
                     downloadName="Curriculo-DavidFontes.pdf"
                   />
                 </li>
@@ -50,7 +50,7 @@ export default function Aside({ local }: asideProps) {
                   <LinksAside
                     arialLabel="botão para ir para o meu linkedin"
                     URL="https://www.linkedin.com/in/david-fontes-9b84a4201"
-                    icon="/assets/svgs/Linkedin.svg"
+                    icon="/assets/icons/Linkedin.svg"
                   />
                 </li>
               </ul>
