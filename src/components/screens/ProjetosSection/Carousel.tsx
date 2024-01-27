@@ -4,36 +4,39 @@ import { useEffect, useState } from 'react'
 import Card from './Card'
 import axios from 'axios'
 
-interface projeto {
+interface projetoDataType {
   desktop: string
   mobile: string
   title: string
   techs: Array<string>
   description: string
   link: string
+  blackOrWithe: string
+}
+
+interface projetos {
+  projeto1: projetoDataType
+  projeto2: projetoDataType
+  projeto3: projetoDataType
 }
 
 export default function Carousel() {
   const [showCard1, setShowCard1] = useState(false)
   const [showCard2, setShowCard2] = useState(true)
   const [showCard3, setShowCard3] = useState(false)
-  const [dataProjeto1, setDataProjeto1] = useState<projeto>()
-  const [dataProjeto2, setDataProjeto2] = useState<projeto>()
-  const [dataProjeto3, setDataProjeto3] = useState<projeto>()
+  const [dataProjetos, setDataProjetos] = useState<projetos>()
   const [load, setLoad] = useState(true)
 
   useEffect(() => {
     axios
       .get('https://backend-portfolio-one.vercel.app/projects')
       .then((response) => {
-        setDataProjeto1(response.data.projeto1)
-        setDataProjeto2(response.data.projeto2)
-        setDataProjeto3(response.data.projeto3)
+        setDataProjetos(response.data)
         setLoad(false)
       })
   }, [])
 
-  const backProject = () => {
+  const previousProject = () => {
     if (showCard1) {
       return 0
     } else {
@@ -66,7 +69,7 @@ export default function Carousel() {
       <div className="flex items-center smHeight:mt-0 phoneSm:mt-0 phone:mt-2">
         <button
           aria-label="voltar projeto"
-          onClick={() => backProject()}
+          onClick={() => previousProject()}
           className=" z-10 -mr-9 hidden flex-col items-center justify-center phoneSm:mr-2 phoneSm:flex phone:flex"
         >
           <div className="-mb-1 h-10 w-1 rotate-[20deg] bg-black"></div>
@@ -74,7 +77,7 @@ export default function Carousel() {
         </button>
         <div className="relative flex w-[82vw] max-w-[900px] justify-center overflow-hidden phone:w-[400px] tablet:w-[85vw]">
           <div
-            onClick={() => backProject()}
+            onClick={() => previousProject()}
             className={`${
               showCard1 && 'opacity-0'
             } absolute left-0 z-10 h-full w-[200px] transition-all duration-500 phoneSm:hidden  phone:hidden laptops:w-[150px]`}
@@ -105,9 +108,21 @@ export default function Carousel() {
               '-translate-x-[400px] smHeight:-translate-x-[320px] phoneSm:-translate-x-[260px] phone:-translate-x-[280px] tablet:-translate-x-[300px]'
             } transition-transform duration-1000 `}
           >
-            <Card show={showCard1} data={dataProjeto1} loading={load} />
-            <Card show={showCard2} data={dataProjeto2} loading={load} />
-            <Card show={showCard3} data={dataProjeto3} loading={load} />
+            <Card
+              show={showCard1}
+              data={dataProjetos?.projeto1}
+              loading={load}
+            />
+            <Card
+              show={showCard2}
+              data={dataProjetos?.projeto2}
+              loading={load}
+            />
+            <Card
+              show={showCard3}
+              data={dataProjetos?.projeto3}
+              loading={load}
+            />
           </div>
         </div>
         <button
