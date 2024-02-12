@@ -1,5 +1,5 @@
-import ProjetosSection from '@/screens/ProjetosSection'
-import Layout from '../../Layout'
+import ProjetosSection from '@/components/screens/ProjetosSection'
+import Layout from '../../components/Layout'
 
 export default function Projetos() {
   return (

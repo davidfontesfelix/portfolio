@@ -16,16 +16,13 @@ export default function Aside({ local }: asideProps) {
 
   useEffect(() => {
     const getCurriculum = async () => {
-      try {
-        const response = await fetch(
-          'https://backend-portfolio-one.vercel.app/curriculum',
-        )
-        const data = await response.json()
-        setCurriculum(data.src)
-      } catch (error) {
-        console.error(error)
-      }
+      const response = await fetch(
+        'https://backend-portfolio-one.vercel.app/curriculum',
+      )
+      const data = await response.json()
+      setCurriculum(data.src)
     }
+
     getCurriculum()
   }, [])
 

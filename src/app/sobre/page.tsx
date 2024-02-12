@@ -1,5 +1,5 @@
-import SobreMimSection from '@/screens/SobreMimSection'
-import Layout from '../../Layout'
+import SobreMimSection from '@/components/screens/SobreMimSection'
+import Layout from '../../components/Layout'
 
 export default function SobreMim() {
   return (

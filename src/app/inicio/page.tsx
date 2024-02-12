@@ -1,5 +1,5 @@
-import Header from '@/screens/Header'
-import Layout from '@/Layout'
+import Header from '@/components/screens/Header'
+import Layout from '@/components/Layout'
 
 export default function Inicio() {
   return (
