@@ -50,7 +50,7 @@ export default function Carousel() {
     axios
       .get('https://backend-portfolio-one.vercel.app/projects')
       .then((response) => {
-        setDataProjetos(response.data)
+        setDataProjetos(response.data.Projects)
         setLoad(false)
       })
   }, [])
