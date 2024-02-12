@@ -14,7 +14,7 @@ interface projetoDataType {
 
 interface CardProps {
   show: number
-  data: projetoDataType | any
+  data: projetoDataType
   loading: boolean
   id: number
 }
@@ -29,9 +29,9 @@ export default function Card({ show, data, loading, id }: CardProps) {
       <div className=" flex h-[45%] w-full items-center justify-center rounded-t-lg bg-[#636363] phoneSm:h-[40%] phone:h-[37%] tablet:h-[37%]">
         <DesktopAndMobileScreens
           loading={loading}
-          desktop={data?.desktop}
-          mobile={data?.mobile}
-          blackOrWhite={data?.blackOrWhite}
+          desktop={data.desktop}
+          mobile={data.mobile}
+          blackOrWhite={data.blackOrWhite}
         />
       </div>
       <div className=" ml-6 mr-6 text-white phoneSm:ml-4 phoneSm:mr-4">
@@ -41,8 +41,8 @@ export default function Card({ show, data, loading, id }: CardProps) {
           <h2 className="mt-4 text-3xl font-bold">{data?.title}</h2>
         )}
         <div className="mt-2 flex flex-wrap gap-4">
-          {data?.techs.map((tech: string) => (
-            <Category key={tech} title={tech} />
+          {data.techs.map((tech: string, index) => (
+            <Category key={index} title={tech} />
           ))}
         </div>
         {loading ? (

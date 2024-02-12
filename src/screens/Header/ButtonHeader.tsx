@@ -42,7 +42,7 @@ export default function ButtonHeader({ children }: ButtonHeaderProps) {
       onMouseLeave={() => setHover(false)}
       className="relative flex w-full max-w-[400px] items-center justify-center gap-3 overflow-hidden border-2 border-black py-4 shadow-xl phone:w-full"
     >
-      <span className="text-xl font-medium uppercase tracking-wider">
+      <span className="text-xl font-medium uppercase tracking-wider phoneSm:text-base">
         {children}
       </span>
       <Arrow color="black" />

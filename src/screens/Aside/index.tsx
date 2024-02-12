@@ -1,5 +1,5 @@
 'use client'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Opacity from './Opacity'
 import LinksAside from './LinksAside'
 import { MyContextAside } from '@/context/MyContexAside'
@@ -12,6 +12,41 @@ interface asideProps {
 
 export default function Aside({ local }: asideProps) {
   const { showAside, setShowAside } = useContext(MyContextAside)
+  const [curriculum, setCurriculum] = useState<string>('')
+
+  useEffect(() => {
+    const getCurriculum = async () => {
+      try {
+        const response = await fetch(
+          'https://backend-portfolio-one.vercel.app/curriculum',
+        )
+        const data = await response.json()
+        setCurriculum(data.src)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    getCurriculum()
+  }, [])
+
+  const asideLinks = [
+    {
+      arialLabel: 'botão para ir para o meu whatsapp',
+      URL: 'https://wa.me/5579999634862',
+      icon: '/assets/icons/Whatsapp.svg',
+    },
+    {
+      arialLabel: 'botão para ver meu curriculo',
+      URL: curriculum,
+      icon: '/assets/icons/Cv.svg',
+    },
+    {
+      arialLabel: 'botão para ir para o meu linkedin',
+      URL: 'https://www.linkedin.com/in/david-fontes-9b84a4201',
+      icon: '/assets/icons/Linkedin.svg',
+    },
+  ]
+
   return (
     <>
       <aside
@@ -31,28 +66,15 @@ export default function Aside({ local }: asideProps) {
                 </p>
               </div>
               <ul className="mt-8 flex gap-8 phone:gap-10 horizontal:hidden">
-                <li>
-                  <LinksAside
-                    arialLabel="botão para ir para o meu whatsapp"
-                    URL="https://wa.me/5579999634862"
-                    icon="/assets/icons/Whatsapp.svg"
-                  />
-                </li>
-                <li>
-                  <LinksAside
-                    arialLabel="botão para baixar meu curriculo"
-                    URL="/assets/Cv.pdf"
-                    icon="/assets/icons/Cv.svg"
-                    downloadName="Curriculo-DavidFontes.pdf"
-                  />
-                </li>
-                <li>
-                  <LinksAside
-                    arialLabel="botão para ir para o meu linkedin"
-                    URL="https://www.linkedin.com/in/david-fontes-9b84a4201"
-                    icon="/assets/icons/Linkedin.svg"
-                  />
-                </li>
+                {asideLinks.map((element, index) => (
+                  <li key={index}>
+                    <LinksAside
+                      arialLabel={element.arialLabel}
+                      URL={element.URL}
+                      icon={element.icon}
+                    />
+                  </li>
+                ))}
               </ul>
               <div className="mt-6 h-[2px] w-full bg-black horizontal:hidden" />
 

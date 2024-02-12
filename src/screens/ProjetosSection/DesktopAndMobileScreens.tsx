@@ -22,11 +22,7 @@ export default function DesktopAndMobileScreens({
           }`}
         >
           <div className="h-full w-full">
-            <div
-              className={`h-full w-full ${
-                blackOrWhite === 'black' ? 'bg-black' : 'bg-white'
-              }`}
-            >
+            <div className="h-full w-full bg-white">
               {loading ? (
                 <div className="h-full w-full bg-neutral-300" />
               ) : (
@@ -41,22 +37,12 @@ export default function DesktopAndMobileScreens({
             </div>
           </div>
         </div>
+        <div className="h-[5%] w-[70%] rounded-b-md bg-white" />
         <div
-          className={`h-[5%] w-[70%] rounded-b-md ${
-            blackOrWhite === 'black' ? 'bg-black' : 'bg-white'
-          }`}
-        />
-        <div
-          className={`h-[15%] w-[10%] ${
-            blackOrWhite === 'black' ? 'bg-black' : 'bg-gray-200'
-          }`}
+          className="h-[15%] w-[10%] bg-white"
           style={{ boxShadow: '0px 10px 10px 0px rgba(0, 0, 0, 0.25) inset' }}
         />
-        <div
-          className={`h-[2%] w-[30%] rounded-lg ${
-            blackOrWhite === 'black' ? 'bg-black' : 'bg-gray-200'
-          }`}
-        />
+        <div className="h-[2%] w-[30%] rounded-lg bg-gray-200" />
       </div>
       <div
         className={`absolute bottom-6 right-12 flex h-[110px] w-[65px] justify-center rounded-md border-2 ${

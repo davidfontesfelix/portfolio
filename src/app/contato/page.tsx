@@ -1,5 +1,5 @@
-import ContatoSection from '@/components/screens/ContatoSection'
-import Layout from '../../components/Layout'
+import ContatoSection from '@/screens/ContatoSection'
+import Layout from '../../Layout'
 
 export default function Contato() {
   return (

@@ -2,22 +2,16 @@
 import Heading from '@/components/Heading'
 import { useEffect, useReducer, useState } from 'react'
 import Card from './Card'
-import axios from 'axios'
 
 interface projetoDataType {
+  id: number
   desktop: string
   mobile: string
   title: string
   techs: Array<string>
   description: string
   link: string
-  blackOrWithe: string
-}
-
-interface Projetos {
-  projeto1: projetoDataType
-  projeto2: projetoDataType
-  projeto3: projetoDataType
+  blackOrWhite: string
 }
 
 interface AppState {
@@ -43,16 +37,23 @@ const reducer = (selectCard: AppState, action: Action) => {
 
 export default function Carousel() {
   const [selectCard, dispatch] = useReducer(reducer, { cardSelected: 2 })
-  const [dataProjetos, setDataProjetos] = useState<Projetos>()
+  const [dataProjects, setDataProjects] = useState<projetoDataType[]>([])
   const [load, setLoad] = useState(true)
 
   useEffect(() => {
-    axios
-      .get('https://backend-portfolio-one.vercel.app/projects')
-      .then((response) => {
-        setDataProjetos(response.data.Projects)
+    const getProjects = async () => {
+      try {
+        const response = await fetch(
+          'https://backend-portfolio-one.vercel.app/projects',
+        )
+        const data = await response.json()
+        setDataProjects(data)
         setLoad(false)
-      })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    getProjects()
   }, [])
 
   return (
@@ -102,24 +103,15 @@ export default function Carousel() {
               '-translate-x-[400px] smHeight:-translate-x-[320px] phoneSm:-translate-x-[260px] phone:-translate-x-[280px] tablet:-translate-x-[300px]'
             } transition-transform duration-1000 `}
           >
-            <Card
-              show={selectCard.cardSelected}
-              data={dataProjetos?.projeto1}
-              loading={load}
-              id={1}
-            />
-            <Card
-              show={selectCard.cardSelected}
-              data={dataProjetos?.projeto2}
-              loading={load}
-              id={2}
-            />
-            <Card
-              show={selectCard.cardSelected}
-              data={dataProjetos?.projeto3}
-              loading={load}
-              id={3}
-            />
+            {dataProjects.map((element, index) => (
+              <Card
+                loading={load}
+                key={index}
+                show={selectCard.cardSelected}
+                id={element.id}
+                data={element}
+              />
+            ))}
           </div>
         </div>
         <button
