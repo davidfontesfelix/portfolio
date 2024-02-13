@@ -10,7 +10,7 @@ module.exports = {
       screens: {
         smHeight: { raw: '(max-height: 740px)' },
         phoneSm: { max: '375px' },
-        phone: { max: '480px', min: '376px' },
+        phone: { max: '599px', min: '376px' },
         horizontal: { raw: '(max-height: 480px)' },
         tablet: { max: '1023px', min: '600px' },
         laptops: { min: '1024px' },

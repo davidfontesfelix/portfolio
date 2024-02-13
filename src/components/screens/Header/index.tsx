@@ -29,7 +29,7 @@ export default function Header() {
       <div className="flex tablet:justify-end laptops:justify-end">
         <p className="w-full max-w-xs leading-5 phone:max-w-none tablet:max-w-md laptops:max-w-md">
           Tenho {checkAge(2005)} anos e sou desenvolvedor front-end com{' '}
-          {checkExperience(2021)} ano de experiência trabalhando como
+          {checkExperience(2021)} anos de experiência trabalhando como
           freelancer.
         </p>
       </div>
